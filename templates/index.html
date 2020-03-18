@@ -1,0 +1,15 @@
+<!doctype html>
+<title>covid-19 update</title>
+
+<body>
+
+    <h1 style="font-size:60px;">Latest covid-19 update</h1>
+    {% if update %}
+        {% for  title in update %}
+            <h3> {{ title }} </h3>
+            <p> {{ update[title] }} </p>
+        {% endfor %}
+    {% else %}
+        <p>Some error occured</p>
+    {% endif %}
+</body>
